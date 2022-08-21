@@ -1,0 +1,8 @@
+/* Global Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.authenticator-view {
+    --amplify-components-authenticator-max-width: 100%
+}

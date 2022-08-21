@@ -1,0 +1,17 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "secretKey",
+      "environmentVariableName": "SECRET_KEY"
+    },
+    {
+      "cloudFormationParameterName": "webhookSecret",
+      "environmentVariableName": "WEBHOOK_SECRET"
+    },
+    {
+      "cloudFormationParameterName": "apiBeatstoreUserTableName",
+      "environmentVariableName": "API_BEATSTORE_USER_TABLE_NAME"
+    }
+  ]
+}

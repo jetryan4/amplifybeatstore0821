@@ -1,0 +1,18 @@
+{
+  "trigger": true,
+  "modules": [
+    "email-filter-denylist"
+  ],
+  "parentResource": "beatstoreauth",
+  "functionName": "beatstoreauthPreSignup",
+  "resourceName": "beatstoreauthPreSignup",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "C:\\Users\\kokil\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PreSignup",
+  "triggerTemplate": "PreSignup.json.ejs",
+  "triggerEventPath": "PreSignup.event.json",
+  "roleName": "beatstoreauthPreSignup",
+  "skipEdit": true,
+  "DOMAINDENYLIST": "example.com",
+  "enableCors": false
+}

@@ -1,0 +1,15 @@
+{
+  "resourceName": "beatstoreresources",
+  "policyUUID": "961415d0",
+  "bucketName": "beatstoreresources",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "groupAccess": {}
+}

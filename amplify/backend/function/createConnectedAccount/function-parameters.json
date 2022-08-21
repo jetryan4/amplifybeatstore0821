@@ -1,0 +1,21 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "stripeSecretKey",
+      "environmentVariableName": "STRIPE_SECRET_KEY"
+    },
+    {
+      "cloudFormationParameterName": "userTableName",
+      "environmentVariableName": "USER_TABLE_NAME"
+    },
+    {
+      "cloudFormationParameterName": "stripeAccountRefreshUrl",
+      "environmentVariableName": "STRIPE_ACCOUNT_REFRESH_URL"
+    },
+    {
+      "cloudFormationParameterName": "stripeAccountReturnUrl",
+      "environmentVariableName": "STRIPE_ACCOUNT_RETURN_URL"
+    }
+  ]
+}

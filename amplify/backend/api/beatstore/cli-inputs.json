@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "beatstore",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\Work\\QrioMatrix\\Fiver\\BeatStore\\rankine-records-beatstore\\amplify\\backend\\api\\beatstore\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-02-10T10:28:27.410Z",
+      "keyDescription": "guest users key"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authbeatstoreauth"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "Action": [
+      "cognito-idp:GetGroup",
+      "cognito-idp:AdminAddUserToGroup"
+    ],
+    "Resource": [
+      "arn:aws:cognito-idp:us-east-1:885920578765:userpool/us-east-1_oqsee8Kyf"
+    ]
+  },
+  {
+    "Action": [
+      "dynamodb:PutItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:us-east-1:885920578765:table/User-*"
+    ]
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-beatstore-dev-124810-authRole",
+      "UnauthRoleArn": "arn:aws:iam::885920578765:role/amplify-beatstore-dev-124810-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::885920578765:role/amplify-beatstore-dev-124810-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+      "UnauthRoleName": "amplify-beatstore-dev-124810-unauthRole",
+      "StackName": "amplify-beatstore-dev-124810",
+      "StackId": "arn:aws:cloudformation:us-east-1:885920578765:stack/amplify-beatstore-dev-124810/234d8160-7e78-11ec-bd62-12e516baf99d",
+      "AmplifyAppId": "d3ildo7hf6v25c",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-beatstore-dev-124810-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "beatstoreauth": {}
+      },
+      "function": {
+        "beatstoreauthPostConfirmation": {
+          "GROUP": "User",
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/beatstoreauthPostConfirmation-547575425650435a4c48-build.zip"
+        },
+        "beatstoreauthPreSignup": {
+          "DOMAINDENYLIST": "example.com",
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/beatstoreauthPreSignup-5156336b646e76457036-build.zip"
+        },
+        "AdminQueries38ffdf56": {
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/AdminQueries38ffdf56-45736e52654d66344f36-build.zip"
+        },
+        "processPayment": {
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/processPayment-7a6f6268737747413377-build.zip"
+        },
+        "createOrder": {
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/createOrder-39786372786d53413141-build.zip"
+        },
+        "createConnectedAccount": {
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/createConnectedAccount-6a45736b4b527557722f-build.zip",
+          "stripeSecretKey": "sk_test_51JyWt6E1PKsLl8ZQoWaLl7j196Dw7ZA7An4jFH94O3LuMSL1N4tI0spqbl5w5o13UDgRun3fqUOGbNJYX83Iv7YI005SIqFhOq",
+          "userTableName": "User-rh5n6uoak5e2bbwbfuy6kh32fa-dev",
+          "stripeAccountRefreshUrl": "http://localhost:3000/",
+          "stripeAccountReturnUrl": "http://localhost:3000/"
+        },
+        "stripeWebhook": {
+          "secretKey": "sk_test_51JyWt6E1PKsLl8ZQoWaLl7j196Dw7ZA7An4jFH94O3LuMSL1N4tI0spqbl5w5o13UDgRun3fqUOGbNJYX83Iv7YI005SIqFhOq",
+          "webhookSecret": "whsec_MxUVJabRMbETxigM2BKiL1m8Izwx1wFi",
+          "apiBeatstoreUserTableName": "User-rh5n6uoak5e2bbwbfuy6kh32fa-dev",
+          "deploymentBucketName": "amplify-beatstore-dev-124810-deployment",
+          "s3Key": "amplify-builds/stripeWebhook-5a634b64353445524a5a-build.zip"
+        }
+      }
+    }
+  }
+}

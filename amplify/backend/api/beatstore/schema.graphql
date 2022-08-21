@@ -1,0 +1,103 @@
+type Product @aws_api_key
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      { allow: groups, groups: ["Admin"] }
+      { allow: owner }
+      { allow: public, operations: [read]}
+    ]
+  ) {
+  id: ID!
+  title: String!
+  description: String
+  coverPhoto: String
+  sampleAudio: String
+  originalFile: String
+  price: Float
+  orders: [Order] @manyToMany(relationName: "ProductOrder")
+  owner: String! @index(name: "byOwner", queryField: "productByOwner")
+  deleted: Boolean @default(value: "false")
+}
+
+type Order @aws_api_key
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+      { allow: groups, groups: ["Admin"] }
+      { allow: owner }
+      { allow: public, operations: [read]}
+    ]
+  ) {
+  id: ID!
+  date: String
+  email: String
+  chargeId: String
+  total: Float
+  products: [Product] @manyToMany(relationName: "ProductOrder")
+  owner: String @index(name: "byOwner", queryField: "orderByOwner")
+}
+
+type User @aws_api_key
+  @model(subscriptions: null)
+  @auth(
+    rules: [
+       { allow: groups, groups: ["Admin"] }
+       { allow: owner, ownerField: "id" }
+       { allow: public, operations: [read]}
+    ]
+  ) {
+  id: ID!
+  firstName: String
+  lastName: String
+  email: String! @index(name: "byEmail", queryField: "userByEmail")
+  rating: Int
+  country: String
+  gender: String
+  genre: String
+  picture: String
+  role: String @index(name: "byRole", queryField: "userByRole")
+  status: String
+  stripeAccount: String @index(name: "byStripeAccount", queryField: "userByStripeAccount")
+  stripeAccountStatus: String
+  stripeSplitPercentage: Float
+}
+
+# Process order
+enum OrderStatus {
+  SUCCESS
+  FAILED
+}
+
+input CartItem {
+  id: ID!
+  title: String
+  image: String
+  price: Float
+  amount: Int
+  signedUrl: String
+  token
+  : String
+}
+
+input ProcessOrderInput {
+  id: ID!
+  cart: [CartItem]
+  userId: String
+  email: String
+  total: Float!
+  token: String!
+  address: String
+}
+
+input CreateConnectedAccountInput {
+  userId: String!
+  email: String!
+}
+
+type Mutation {
+  processOrder(input: ProcessOrderInput!): OrderStatus
+    @function(name: "processPayment-${env}")
+    @function(name: "createOrder-${env}")
+  createConnectedAccount(input: CreateConnectedAccountInput!): String
+    @function(name: "createConnectedAccount-${env}")
+}

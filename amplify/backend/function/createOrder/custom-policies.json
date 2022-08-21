@@ -1,0 +1,29 @@
+[
+  {
+    "Action": [
+      "dynamodb:PutItem",
+      "dynamodb:GetItem",
+      "dynamodb:BatchWriteItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:us-east-1:885920578765:table/Order-*", "arn:aws:dynamodb:us-east-1:885920578765:table/ProductOrder-*", "arn:aws:dynamodb:us-east-1:885920578765:table/Product-*"
+    ]
+  },
+  {
+    "Action": [
+      "ses:SendRawEmail",
+      "ses:SendEmail"
+    ],
+    "Resource": [
+      "*"
+    ]
+  },
+  {
+    "Action": [
+      "s3:*"
+    ],
+    "Resource": [
+      "arn:aws:s3:::beatstoreresources124810-dev"
+    ]
+  }
+]

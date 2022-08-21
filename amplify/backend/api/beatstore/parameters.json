@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "beatstore",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authbeatstoreauth",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
